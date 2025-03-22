@@ -504,6 +504,7 @@ static PyObject *CronetEngine_request(CronetEngineObject *self, PyObject *args) 
       Cronet_HttpHeader_name_set(request_header, key);
       Cronet_HttpHeader_value_set(request_header, value);
       Cronet_UrlRequestParams_request_headers_add(request_params, request_header);
+      Cronet_HttpHeader_Destroy(request_header);
     }
   }
 
